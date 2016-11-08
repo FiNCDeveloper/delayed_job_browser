@@ -41,3 +41,12 @@ config :delayed_job_browser, DJB.Repo,
   database: "delayed_job_browser_dev",
   hostname: "localhost",
   pool_size: 10
+
+# config :delayed_job_browser, DJB.Repos.MyApp,
+  # adapter: Ecto.Adapters.MySQL,
+  # username: "root",
+  # password: "",
+  # database: "my_app_development",
+  # hostname: "localhost",
+  # pool_size: 10,
+  # priv: "priv/repos/my_app_repo"

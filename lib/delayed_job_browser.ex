@@ -10,6 +10,8 @@ defmodule DJB do
     children = [
       # Start the Ecto repository
       supervisor(DJB.Repo, []),
+      # Add your repository where delayed_job is running
+      # supervisor(DJB.Repos.MyAppRepo, []),
       # Start the endpoint when the application starts
       supervisor(DJB.Endpoint, []),
       # Start your own worker by calling: DJB.Worker.start_link(arg1, arg2, arg3)
