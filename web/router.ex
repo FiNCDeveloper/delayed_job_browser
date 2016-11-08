@@ -16,6 +16,7 @@ defmodule DJB.Router do
   scope "/", DJB do
     pipe_through :browser # Use the default browser stack
 
+    resources "/delayed_jobs", DelayedJobController, only: [:index, :delete]
     get "/", PageController, :index
   end
 

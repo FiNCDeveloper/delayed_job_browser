@@ -1,0 +1,5 @@
+<aside class="col-md-f">
+<%= for {application, delayed_jobs} <- @delayed_jobs_with_app do %>
+  <%= render "table.html", delayed_jobs: delayed_jobs, conn: @conn, application: application %>
+<% end %>
+</aside>

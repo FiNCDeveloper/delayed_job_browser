@@ -1,0 +1,19 @@
+<tr class="p-job__row">
+  <td class="p-job__item p-job--short"><%= @job.id %></td>
+  <td class="p-job__item p-job--short"><%= @job.attempts %></td>
+  <td class="p-job__item p-job--short"><%= @job.attempts %></td>
+  <td class="p-job__item p-job--long"><%= text_to_html(@job.handler || "") %></td>
+  <td class="p-job__item p-job--long"><%= text_to_html(@job.last_error || "") %></td>
+  <td class="p-job__item p-job--middle"><%= @job.run_at %></td>
+  <td class="p-job__item p-job--middle"><%= @job.locked_at %></td>
+  <td class="p-job__item p-job--middle"><%= @job.failed_at %></td>
+  <td class="p-job__item p-job--middle"><%= @job.locked_by %></td>
+  <td class="p-job__item p-job--middle"><%= @job.queue %></td>
+  <td class="p-job__item p-job--middle"><p><%= @job.created_at %></p><p><%= @job.updated_at %></td>
+  <td class="p-job__item p-job--short">
+    <%= button "Delete", to: delayed_job_path(@conn, :delete, @job, application: @application),
+    method: :delete,
+    onclick: "return confirm(\"Are you sure to delete this job ?\");",
+    class: "btn btn-danger" %>
+  </td>
+</tr>

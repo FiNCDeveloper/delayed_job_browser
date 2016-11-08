@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+}
+.p-job {
+    border: 1px solid #cececc;
+    border-radius: 3px;
+    margin: 0 auto 70px;
+    text-align: left;
+    width: 100%;
+}
+
+.p-job__row {
+}
+
+.p-job--short {
+    width: 20px;
+    max-width: 30px;
+}
+
+.p-job--middle {
+    width: 40px;
+    max-width: 52px;
+}
+
+.p-job--long {
+    width: 100px;
+    max-width: 120px;
+    overflow: auto;
+    white-space: nowrap;
+}
+.p-job--long > p {
+    max-height: 100px;
+}
+
+.p-job__container {
+    width: 100%;
+}
+.p-job__wrapper {
+    margin: 0 auto;
+}
+
+.p-job__header {
+    font-size: 14px;
+    color: #4b4f56;
+    background: #f6f7f9;
+    font-weight: bold;
+}
+
+.p-job__item {
+    padding-right: 10px;
+    border: 1px solid #f7f7f7;
+}

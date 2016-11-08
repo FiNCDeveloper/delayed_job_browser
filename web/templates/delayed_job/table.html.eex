@@ -1,0 +1,24 @@
+<h2 id="<%= @application %>"><%= @application %></h2>
+<table class="p-job">
+  <thead>
+    <tr class="p-job__header">
+      <th class="p-job__item p-job--short">Id</th>
+      <th class="p-job__item p-job--short">Priority</th>
+      <th class="p-job__item p-job--short">Attempts</th>
+      <th class="p-job__item p-job--long">Handler</th>
+      <th class="p-job__item p-job--long">Last Error</th>
+      <th class="p-job__item p-job--middle">Run At</th>
+      <th class="p-job__item p-job--middle">Locked At</th>
+      <th class="p-job__item p-job--middle">Failed At</th>
+      <th class="p-job__item p-job--middle">Locked By</th>
+      <th class="p-job__item p-job--middle">Queue</th>
+      <th class="p-job__item p-job--middle">Timestamp</th>
+      <th class="p-job__item p-job--short">Action</th>
+    </tr>
+  </thead>
+  <tbody class="p-job__body">
+    <%= for job <- @delayed_jobs do %>
+      <%= render "job.html", job: job, conn: @conn, application: @application %>
+    <% end %>
+  </tbody>
+</table>
