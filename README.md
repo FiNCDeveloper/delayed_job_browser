@@ -63,7 +63,7 @@ config :delayed_job_browser, DJB.Repos.MyApp,
 $ mkdir priv/repos/my_app_repo
 ```
 
-### 5. Add application settings to delayed_job_controller#show
+### 5. Add application settings to delayed_job_controller#index
 
 ```ex
 delayed_jobs_with_app = [{"my_app", DJB.Repos.MyAppRepo}]
